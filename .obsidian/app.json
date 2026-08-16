@@ -1,0 +1,14 @@
+{
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "showLineNumber": true,
+  "foldHeading": true,
+  "foldIndent": true,
+  "tabSize": 4,
+  "useTab": false,
+  "attachmentFolderPath": "06 - Attachments/Images",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "03 - Notes",
+  "promptDelete": false,
+  "alwaysUpdateLinks": true
+}

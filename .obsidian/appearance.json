@@ -1,0 +1,12 @@
+{
+  "baseFontSize": 17,
+  "theme": "moonstone",
+  "enabledCssSnippets": [
+    "cyber-writing",
+    "title-spacing",
+    "image-alignment",
+    "font-contrast",
+    "custom-blocks"
+  ],
+  "cssTheme": "AnuPpuccin"
+}

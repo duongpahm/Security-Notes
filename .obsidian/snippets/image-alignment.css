@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Obsidian Image Alignment & Styles (Căn lề và định dạng hình ảnh)
+   ========================================================================== */
+
+/* --- CĂN LỀ TRÁI (LEFT) --- */
+img[alt*="left"],
+.markdown-source-view.mod-cm6 .internal-embed[alt*="left"] {
+    display: block !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+/* --- CĂN LỀ PHẢI (RIGHT) --- */
+img[alt*="right"],
+.markdown-source-view.mod-cm6 .internal-embed[alt*="right"] {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+/* --- CĂN LỀ GIỮA (CENTER) --- */
+img[alt*="center"],
+.markdown-source-view.mod-cm6 .internal-embed[alt*="center"] {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* --- DÀNH CHO AI MUỐN CHỮ BAO QUANH ẢNH (FLOAT) --- */
+img[alt*="float-left"],
+.markdown-source-view.mod-cm6 .internal-embed[alt*="float-left"] {
+    float: left !important;
+    clear: left !important;
+    margin: 0.5rem 1rem 0.5rem 0 !important;
+}
+
+img[alt*="float-right"],
+.markdown-source-view.mod-cm6 .internal-embed[alt*="float-right"] {
+    float: right !important;
+    clear: right !important;
+    margin: 0.5rem 0 0.5rem 1rem !important;
+}
+
+/* --- CHẾ ĐỘ VIỀN ẢNH (BORDER / OUTLINE) --- */
+/* Sử dụng cú pháp: ![[ảnh.png|border]] hoặc ![[ảnh.png|outline]] */
+img[alt*="border"],
+img[alt*="outline"],
+.markdown-source-view.mod-cm6 .internal-embed[alt*="border"] img,
+.markdown-source-view.mod-cm6 .internal-embed[alt*="outline"] img {
+    border: 1.5px solid var(--background-modifier-border) !important;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
