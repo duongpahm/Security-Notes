@@ -119,7 +119,7 @@ HANDLE hFile = INVALID_HANDLE_VALUE;
 
 // Đường dẫn đầy đủ của tệp cần tạo.
 // Trong C, cần sử dụng hai dấu gạch chéo ngược để escape một dấu gạch chéo ngược.
-LPCWSTR filePath = L"C:\\Users\\maldevacademy\\Desktop\\maldev.txt";
+LPCWSTR filePath = L"C:\\Users\\admin\\Desktop\\maldev.txt";
 
 // Gọi CreateFileW với đường dẫn của tệp
 // Các tham số bổ sung được lấy trực tiếp từ tài liệu.
