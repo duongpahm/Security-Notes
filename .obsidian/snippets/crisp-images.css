@@ -1,0 +1,10 @@
+﻿/* Tá»‘i Æ°u Ä‘á»™ sáº¯c nÃ©t cho áº£nh chá»¥p mÃ n hÃ¬nh vÃ  áº£nh dÃ¡n trong Obsidian */
+.markdown-rendered img,
+.markdown-source-view img,
+.workspace-leaf-content img,
+img {
+    image-rendering: -webkit-optimize-contrast !important;
+    image-rendering: crisp-edges !important;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
