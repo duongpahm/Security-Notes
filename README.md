@@ -47,10 +47,7 @@ Ghi chú chuyên sâu theo định hướng chứng chỉ OSEP và AV Evasion:
 ### 7. THM (TryHackMe)
 - Writeup và ghi chú các phòng lab TryHackMe (Active Directory, Secure AI Systems).
 
-### 8. Dashboard
-- Dashboard quản lý tiến độ học tập và truy vấn tự động các bài lab qua Dataview.
-
-### 9. Attachments
+### 8. Attachments
 - Thư mục lưu trữ toàn bộ hình ảnh, sơ đồ và ảnh chụp bằng chứng thực hành trong quá trình làm lab.
 
 ---
