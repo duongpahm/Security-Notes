@@ -4,3 +4,23 @@
 .obsidian/workspace-mobile.json
 .obsidian/cache/
 photorec.se*
+
+# Visual Studio & C/C++ build artifacts
+.vs/
+*.ipch
+*.suo
+*.user
+*.db
+*.vsidx
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+*.obj
+*.ilk
+*.pdb
+*.tlog
+*.idb
+*.exe

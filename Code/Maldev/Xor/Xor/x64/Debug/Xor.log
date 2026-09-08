@@ -1,3 +1,0 @@
-﻿  Xor.c
-D:\Maldev\Xor\Xor\Xor.c(21,33): warning C4267: '=': conversion from 'size_t' to 'BYTE', possible loss of data
-  Xor.vcxproj -> D:\Maldev\Xor\x64\Debug\Xor.exe
