@@ -31,42 +31,27 @@ Quy trình và nhật ký phân tích mẫu mã độc:
 - **Tĩnh (Static Analysis):** Phân tích PE header, trích xuất strings, import/export tables, kiểm tra chữ ký số.
 - **Động (Dynamic Analysis):** Theo dõi hành vi tiến trình, network traffic, thay đổi registry và file system trong môi trường sandbox/lab.
 
-### 5. 02 - HTB (Hack The Box)
+### 5. HTB (Hack The Box)
 Ghi chép kỹ thuật giải lab và khai thác hệ thống từ HTB Academy / CTF:
 - **Windows Privilege Escalation:** Attacking the OS, Credential Theft, User & Group Privileges, Bypass UAC, Restricted Environments.
 - **Linux Privilege Escalation:** Kỹ thuật leo thang đặc quyền trên môi trường Linux.
 - **Pivoting & Tunneling:** Dynamic port forwarding qua SSH, SOCKS proxy, chuyển hướng traffic giữa các dải mạng.
 - **File Transfer:** Tổng hợp các phương pháp tải công cụ và dữ liệu giữa máy tấn công và target (Windows & Linux).
 
-### 6. 03 - Notes & OSEP
+### 6. Notes & OSEP
 Ghi chú chuyên sâu theo định hướng chứng chỉ OSEP và AV Evasion:
 - Kỹ thuật Client-Side Attacks sử dụng file container (ISO, VHD).
 - Kỹ thuật Phishing qua JScript, macro Microsoft Office, Calendar invites.
 - Cơ chế vượt qua phần mềm diệt virus (Antivirus Evasion).
 
-### 7. 01 - THM (TryHackMe) & 00 - Dashboard
+### 7. THM (TryHackMe)
 - Writeup và ghi chú các phòng lab TryHackMe (Active Directory, Secure AI Systems).
-- Dashboard quản lý tiến độ học tập và tra cứu nhanh trong Obsidian.
 
----
+### 8. Dashboard
+- Dashboard quản lý tiến độ học tập và truy vấn tự động các bài lab qua Dataview.
 
-## Cấu hình Obsidian Vault
-
-Vault đã thiết lập sẵn giao diện và các plugin phục vụ việc viết note kỹ thuật:
-
-- **Theme:** AnuPpuccin (chế độ Moonstone) kết hợp các CSS snippets tùy chỉnh (`cyber-writing`, `code-blocks`, `image-alignment`).
-- **Core Plugins:** Canvas, Graph view, Backlinks, Templates, Command Palette.
-- **Community Plugins chính:**
-  - `dataview`: Truy vấn dữ liệu metadata và tạo danh mục tự động.
-  - `templater-obsidian`: Tạo template ghi chú bài lab chuẩn format.
-  - `code-styler` / `code-editor`: Tối ưu giao diện hiển thị code C/C++, assembly và shell script.
-  - `obsidian-git`: Commit và đồng bộ ghi chú trực tiếp từ giao diện Obsidian.
-  - `omnisearch`: Công cụ tìm kiếm nội dung nhanh trên toàn bộ vault.
-
-### Cách mở Vault trên thiết bị mới
-1. Cài đặt [Obsidian](https://obsidian.md/).
-2. Chọn **Open folder as vault** và trỏ đến thư mục chứa repository này (ví dụ: `E:\SecurityNote`).
-3. Vào phần **Settings** -> **Community plugins**, bấm chọn **Enable community plugins** để nạp cấu hình plugin có sẵn.
+### 9. Attachments
+- Thư mục lưu trữ toàn bộ hình ảnh, sơ đồ và ảnh chụp bằng chứng thực hành trong quá trình làm lab.
 
 ---
 

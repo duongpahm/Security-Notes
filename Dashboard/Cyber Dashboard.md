@@ -4,7 +4,7 @@
 
 ```dataview
 TABLE platform, difficulty, os, status
-FROM "01 - THM" OR "02 - HTB"
+FROM "THM" OR "HTB"
 WHERE status = "in-progress"
 SORT file.mtime DESC
 ```
@@ -13,7 +13,7 @@ SORT file.mtime DESC
 
 ```dataview
 TABLE platform, difficulty, os
-FROM "01 - THM" OR "02 - HTB"
+FROM "THM" OR "HTB"
 WHERE status = "done" OR status = "pwned"
 SORT file.mtime DESC
 ```
@@ -22,7 +22,7 @@ SORT file.mtime DESC
 
 ```dataview
 TABLE topic, file.mtime
-FROM "03 - Notes"
+FROM "Notes"
 SORT file.mtime DESC
 LIMIT 15
 ```
@@ -31,7 +31,6 @@ LIMIT 15
 
 ```dataview
 TABLE topic, file.mtime
-FROM "03 - Notes/Tools"
+FROM "Notes/Tools"
 SORT file.name ASC
 ```
-

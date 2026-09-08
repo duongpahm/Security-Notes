@@ -41,4 +41,6 @@ Trên lệnh trên, chúng ta sử dụng các chức năng `spider` để quét
 ![[Pasted image 20260908081004.png]]
 CME là một công cụ rất mạnh, và đây mới chỉ là một phần rất nhỏ trong khả năng của nó.
 ### SMBMap
-`SMBMap` là một công cụ rất hữu ích để enumerate các SMB share từ máy linux. Công cụ này có thể được sử dụng để thu thập danh sách các share, quyền truy cập và
+`SMBMap` là một công cụ rất hữu ích để enumerate các SMB share từ máy linux. Công cụ này có thể được sử dụng để thu thập danh sách các share, quyền truy cập và nội dung của các share nếu chúng ta có quyền truy cập.
+Sau khi có quyền truy cập, `SMBMap` còn có thể được sử dụng để download và upload file cũng như thực thi các lệnh từ xa. Tương tự CME chúng ta có thể sử dụng `SMBmap` cùng với một bộ domain user credentials để kiểm tra các share mà tài khoản có thể truy cập trên các hệ thống từ xa.
+#### SMBMap To Check Access
