@@ -1,0 +1,15 @@
+/* Giảm khoảng cách dưới tên trang (Inline Title) */
+.inline-title {
+    margin-bottom: 5px !important;
+    padding-bottom: 0px !important;
+}
+
+/* Giảm khoảng cách phía trên của nội dung văn bản (chế độ Edit / Live Preview) */
+.markdown-source-view.mod-cm6 .cm-content {
+    padding-top: 5px !important;
+}
+
+/* Giảm khoảng cách phía trên của nội dung văn bản (chế độ Reading) */
+.markdown-reading-view .markdown-preview-sizer {
+    padding-top: 10px !important;
+}

@@ -1,0 +1,56 @@
+/* Smooth writing experience */
+.markdown-source-view.mod-cm6 .cm-scroller {
+  scroll-behavior: smooth;
+}
+
+/* Better editor width */
+.markdown-source-view,
+.markdown-preview-view {
+  max-width: 980px;
+  margin: auto;
+}
+
+/* Smooth cursor style */
+.cm-cursor {
+  border-left-width: 2px !important;
+  animation: cursorPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes cursorPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+/* Better code blocks */
+.markdown-rendered pre,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  border-radius: 10px;
+}
+
+/* Custom callout: attack */
+.callout[data-callout="attack"] {
+  --callout-color: 255, 80, 80;
+  --callout-icon: lucide-swords;
+}
+
+/* Custom callout: defense */
+.callout[data-callout="defense"] {
+  --callout-color: 80, 180, 255;
+  --callout-icon: lucide-shield-check;
+}
+
+/* Custom callout: flag */
+.callout[data-callout="flag"] {
+  --callout-color: 120, 255, 120;
+  --callout-icon: lucide-flag;
+}
+
+/* Custom callout: command */
+.callout[data-callout="command"] {
+  --callout-color: 180, 120, 255;
+  --callout-icon: lucide-terminal;
+}

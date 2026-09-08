@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Obsidian High Contrast & Sharp Text (Tối ưu độ sắc nét và màu chữ đen)
+   ========================================================================== */
+
+/* Tăng độ sắc nét của font chữ hệ thống */
+body, input, button, select, textarea {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: optimizeLegibility !important;
+}
+
+/* Giao diện SÁNG (Light Mode): Chuyển toàn bộ chữ sang màu đen tuyền sắc nét */
+.theme-light {
+    --text-normal: #000000 !important; /* Chữ thường đen tuyền */
+    --text-muted: #2d2d2d !important;  /* Chữ phụ tối hơn */
+    --text-faint: #4f4f4f !important;  /* Chữ mờ tối hơn */
+    
+    /* Màu tiêu đề H1 -> H6 đen tuyệt đối */
+    --h1-color: #000000 !important;
+    --h2-color: #000000 !important;
+    --h3-color: #000000 !important;
+    --h4-color: #000000 !important;
+    --h5-color: #000000 !important;
+    --h6-color: #000000 !important;
+    
+    /* Màu tên trang */
+    --inline-title-color: #000000 !important;
+}
+
+/* Giao diện TỐI (Dark Mode): Tăng độ tương phản (chữ trắng tinh) để dễ đọc hơn */
+.theme-dark {
+    --text-normal: #ffffff !important; /* Chữ thường trắng tinh */
+    --text-muted: #dcdcdc !important;  /* Chữ phụ sáng rõ */
+    --text-faint: #b0b0b0 !important;  /* Chữ mờ sáng rõ */
+    
+    /* Màu tiêu đề H1 -> H6 trắng tuyệt đối */
+    --h1-color: #ffffff !important;
+    --h2-color: #ffffff !important;
+    --h3-color: #ffffff !important;
+    --h4-color: #ffffff !important;
+    --h5-color: #ffffff !important;
+    --h6-color: #ffffff !important;
+    
+    /* Màu tên trang */
+    --inline-title-color: #ffffff !important;
+}

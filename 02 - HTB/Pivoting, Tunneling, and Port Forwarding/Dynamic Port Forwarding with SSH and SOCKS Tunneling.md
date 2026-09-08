@@ -1,0 +1,2 @@
+## Port Forwarding in Context
+Port Forwarding là một kĩ thuật cho phép chúng ta chuyển tiếp một yêu cầu kết nối từ Port này sang một Port khác. Port Forwarding chủ yếu sử dụng TCP làm tầng giao tiếp để cung cấp khả năng truyền thông hai chiều cho port được chuyển tiếp. Tuy nhiên, lưu lượng 

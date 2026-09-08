@@ -1,0 +1,22 @@
+{
+  "showAliasLabels": false,
+  "customLanguages": [],
+  "usedCount": {
+    "markdown": 23,
+    "vba": 29,
+    "bash": 10,
+    "powershell": 28,
+    "c": 7,
+    "cs": 3,
+    "dotnet": 2,
+    "text": 3,
+    "html": 3,
+    "python": 4,
+    "javascript": 8,
+    "cpp": 1,
+    "shell": 16,
+    "sh": 1,
+    "shellsession": 3,
+    "plain": 1
+  }
+}
