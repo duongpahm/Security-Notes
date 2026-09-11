@@ -4,7 +4,7 @@ Khi được tạo, tệp cron sẽ lưu được lưu trong `/var/spool/cron`d�
 minutes, hours, days, months, weeks, commands
 ```
 Ví dụ, entry:
-```Bash
+```bash
 0 */12 * * * /home/admin/backup.sh
 ```
 sẽ thực thi `/home/admin/backup.sh` 12 giờ một lần.
