@@ -19,7 +19,7 @@ DLL có thể tùy chọn chỉ định một hàm entry point, hàm này thực
 - `DLL_PROCESS_DETACH`: Một tiến trình unload DLL.
 ### Sample DLL Code
 Đoạn mã dưới đây minh họa một cấu trúc mã DLL điển hình:
-```C
+```c
 BOOL APIENTRY DllMain(
     HANDLE hModule,          // Handle to DLL module
     DWORD ul_reason_for_call,// Reason for calling function
@@ -49,7 +49,7 @@ BOOL APIENTRY DllMain(
 ```
 ### Exporting a Function
 DLL có thể export các hàm để ứng dụng hoặc tiến trình gọi chúng sử dụng. Để export một hàm, hàm đó cần được khai báo bằng các từ khóa `extern` và `__declspec(dllexport)`. Ví dụ về một hàm được export `HelloWorld` được minh họa bên dưới.
-```C
+```c
 ////// sampleDLL.dll //////
 extern __declspec(dllexport) void HelloWorld(){
 	// Function code here
@@ -60,17 +60,17 @@ Có thể sử dụng các WinAPI `LoadLibrary`, `GetModuleHandle`, và `GetProc
 #### Loading a DLL
 Việc gọi một hàm như `MessageBoxA` trong một ứng dụng sẽ khiến Windows OS load DLL export hàm `MessageBoxA` vào không gian địa chỉ bộ nhớ của tiến trình gọi; trong trường hợp này là `user32.dll`. Việc load `user32.dll` được OS thực hiện tự động khi tiến trình khời chạy, chứ không phải do mã chương trình thực hiện.
 Tuy nhiên, trong một số trường hợp, chẳng hạn làm `HelloWorld` trong `sampleDLL.dll`, DLL có thể chưa được load vào bộ nhớ. Để ứng dụng có thể gọi hàm `HelloWorld`, trước tiên nó cần lấy handle của DLL đang export hàm đó. Nếu ứng dụng chưa load `sampleDLL.dll` vào bộ nhớ, cần sử dụng WinAPI `LoadLibrary`, như bên dưới:
-```C
+```c
 HMODULE hModule = LoadLibraryA("sampleDLL.dll); // hModule now contain sampleDLL.dll's handle
 ```
 #### Retrieving a Function's Address
 Nếu `sampleDLL.dll` đã được load vào bộ nhớ và đã lấy được handle , bước tiếp theo là lấy địa chỉ của hàm. Việc này được thực hiện bằng WinAPI `GetProcAddress`, hàm này nhận vào handle của DLL export hàm và tên của hàm.
-```C
+```c
 PVOID pHelloWorld = GetProcAddress(hModule, "HelloWorld");
 ```
 #### Invoking The Function
 Sau khi địa chỉ của `HelloWorld` được lưu vào biến `pHelloWorld`, bước tiếp theo là thực hiện type-cast địa chỉ này thành function pointer của hàm `HelloWorld`. Function pointer này cần thiết để có thể invoke hàm.
-```C
+```c
 type void (WINAPI* HelloWorldFunctionPointer)();
 
 void call(){
@@ -84,7 +84,7 @@ void call(){
 ```
 ### Dynamic Linking Example
 Đoạn mã dưới đây minh họa một ví dụ đơn giản khác về dynamic linking, trong đó hàm `MessagenBoxA` được gọi. Đoạn mã giả định rằng `user32.dll`, DLL export hàm này, chưa được load vào bộ nhớ. Như đã đề cập, nếu một DLL chưa được load vào bộ nhớ cần sử dụng `LoadLibrary` để load DLL đó vào address space của tiến trình.
-```C
+```c
 typedef int (WINAPI* MessageBoxAFunctionPointer)( // Constructing a new data type, that will represent MessageBoxA's function pointer 
   HWND          hWnd,
   LPCSTR        lpText,
@@ -107,11 +107,11 @@ Ví dụ, kiểu dữ liệu `MessageBoxAFunctionPointer` ở trên sẽ đượ
 ### Rundll32.exe
 Có một số cách để chạy các hàm được export mà không cần sử dụng phương pháp lập trình. Một kỹ thuật phổ biến là sử dụng binary `rundll32.exe`.
 `Rundll32.dll` là một Windows binary được tích hợp sẵn được sử dụng để chạy một hàm được export từ tệp DLL. Để chạy một hàm được export, sử dụng lệnh:
-```C
+```c
 rundll32.exe <dllname>, <function exported to run>
 ```
 Ví dụ, `User32.dll` export hàm `LockWorkStation`, hàm này có chức năng khóa máy. Để chạy hàm này, sử dụng lệnh:
-```C
+```c
 rundll32.exe user32.dll,LockWorkStation
 ```
 ### Creating a DLL File With Visual Studio

@@ -4,7 +4,7 @@
 Sơ đồ bên dưới minh họa một cấu trúc đơn giản hóa của Portable Executable. Mỗi header được thể hiện trong hình đều được định nghĩa dưới dạng một cấu trúc dữ liệu (data structure) chứa thông tin về tệp PE. ![[Pasted image 20260824171817.png|center]]
 #### DOS Header (IMAGE_DOS_HEADER)
 Header đầu tiên của tệp PE luôn bắt đầu bằng hai byte `0x4D` và `0x5A`, thường được gọi là MZ. Hai byte này đại diện cho chữ ký DOS header (DOS header signature), được sử dụng để xác nhận rằng tệp đang được phân tích hoặc kiểm tra là một PE hợp lệ. DOS header là một cấu trúc dữ liệu được định nghĩa như sau:
-```C
+```c
 typedef struct _IMAGE_DOS_HEADER {      // DOS .EXE header
     WORD   e_magic;                     // Magic number
     WORD   e_cblp;                      // Bytes on last page of file
@@ -38,7 +38,7 @@ Trước khi chuyển sang cấu trúc NT Header, có DOS Stub. Đây là một 
 NT Header rất quan trọng vì nó bao gồm hai image header khác là `FileHeader` và `OptionalHeader`, chứa một lượng lớn thông tin về tệp PE. Tương tự như DOS Header, NT Header cũng chứa signature member, được sử dụng để xác thực nó. Thông thường, thành phần  signature này bằng chuỗi `"PE"` được biểu diễn bởi hai byte `0x50` và `0x45`. Tuy nhiên, vì signature có kiểu dữ liệu `DWORD` nên nó sẽ được biểu diễn dưới dạng `0x50450000`, vẫn là `"PE"`, nhưng được đệm thêm hai byte `0`. Có thể truy cập NT Header bằng cách sử dụng thành viên `e_lfanew` bên trong DOS Header.
 Cấu trúc NT Header thay đổi tùy thuộc vào kiến trúc máy tính
 **32-bit Version:**
-```C
+```c
 typedef struct _IMAGE_NT_HEADERS {
   DWORD                   Signature;
   IMAGE_FILE_HEADER       FileHeader;
@@ -47,7 +47,7 @@ typedef struct _IMAGE_NT_HEADERS {
 ```
 
 **64-bit Version:**
-```C
+```c
 typedef struct _IMAGE_NT_HEADERS64 {
     DWORD                   Signature;
     IMAGE_FILE_HEADER       FileHeader;
@@ -58,7 +58,7 @@ typedef struct _IMAGE_NT_HEADERS64 {
 
 #### File Header (IMAGE_FILE_HEADER)
 Tiếp theo là File Header, có thể được truy cập từ cấu trúc dữ liệu NT Header:
-```C
+```c
 typedef struct _IMAGE_FILE_HEADER {
   WORD  Machine;
   WORD  NumberOfSections;
@@ -77,7 +77,7 @@ Các thành viên quan trọng nhất của cấu trúc này là:
 **Optional Header** là một thành phần quan trọng. Mặc dù có tên là "optional", nó lại thiết yếu đối với quá trình thực thi của tệp PE. Nó được gọi là optional vì một số loại tệp không chứa header này.
 Optional Header có hai phiên bản, một phiên bản dành cho hệ thống 32-bit, một phiên bản dành cho hệ thống 64-bit.  Cả hai phiên bản có các thành viên trong cấu trúc dữ liệu gần như giống nhau, với điểm khác biệt chính nằm ở kích thước của một số thành viên. `ULONGLONG` được sử dụng trong phiên bản 64-bit, trong khi `DWORD` được sử dụng trong phiên bản 32-bit. Ngoài ra phiên bản 32-bit có một số thành viên không tồn tại trong phiên bản 64-bit.
 32-bit Version:
-```C
+```c
 typedef struct _IMAGE_OPTIONAL_HEADER {
   WORD                 Magic;
   BYTE                 MajorLinkerVersion;
@@ -114,7 +114,7 @@ typedef struct _IMAGE_OPTIONAL_HEADER {
 ```
 
 **64-bit Version:**
-```C
+```c
 typedef struct _IMAGE_OPTIONAL_HEADER64 {
   WORD                 Magic;
   BYTE                 MajorLinkerVersion;
@@ -160,14 +160,14 @@ Optional Header chứa rất nhiều thông tin có thể sử dụng trong quá
 - `DataDirectory`: một trong những thành phần quan trọng nhất của Optional Header. Đây là một mảng `IMAGE_DATA_DIRECTORY` chứa các directory trong một tệp PE.
 ##### Data Directory
 Data Directory có thể được truy cập thông qua thành phần cuối cùng của Optional Header. Đây là một mảng có kiểu dữ liệu là `IMAGE_DATA_DIRECTORY`, với cấu trúc dữ liệu như sau:
-```C
+```c
 typedef struct _IMAGE_DATA_DIRECTORY {
     DWORD   VirtualAddress;
     DWORD   Size;
 } IMAGE_DATA_DIRECTORY, *PIMAGE_DATA_DIRECTORY;
 ```
 Mảng Data Directory có kích thước `IMAGE_NUMBEROF_DIRECTORY_ENTRIES` là một hằng số có giá trị `16`. Một phần tử trong mảng đại diện cho một data directory cụ thể, chứa một số thông tin về một PE Section hoặc một Data Table (nơi lưu trữ các thông tin cụ thể về PE). Có thể truy cập một data directory cụ thể bằng cách sử dụng index của nó trong mảng.
-```C
+```c
 #define IMAGE_DIRECTORY_ENTRY_EXPORT          0   // Export Directory
 #define IMAGE_DIRECTORY_ENTRY_IMPORT          1   // Import Directory
 #define IMAGE_DIRECTORY_ENTRY_RESOURCE        2   // Resource Directory
@@ -198,7 +198,7 @@ Các PE section dưới đây là những section quan trọng nhất và tồn 
 - `.reloc`: Chứa thông tin về cách điều chỉnh các địa chỉ bộ nhớ, để chương trình có thể được tải vào bộ nhớ mà không xảy ra lỗi.
 - `.rsrc`: Được sử dụng để lữu trữ các tài nguyên như icon và bitmap.
  Mỗi PE section có một cấu trúc dữ liệu `IMAGE_SECTION_HEADER` chứa thông tin quan trọng về section đó. Các cấu trúc này được lưu bên dưới NT Headers trong tệp PE và được xếp liên tiếp với nhau, trong đó mỗi cấu trúc đại diện cho một section. 
-```C
+```c
 typedef struct _IMAGE_SECTION_HEADER {
   BYTE  Name[IMAGE_SIZEOF_SHORT_NAME];
   union {

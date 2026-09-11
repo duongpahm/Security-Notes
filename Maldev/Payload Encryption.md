@@ -10,7 +10,7 @@ Các  thuật toán mã hóa được sử dụng phổ biến trong malware là
 XOR encryption là phương pháp đơn giản nhất để sử dụng và nhẹ nhất để triển khai, do đó trở thành một lựa chọn phổ biến trong malware. XOR nhanh hơn AES và RC4, đồng thời không yêu cầu sử dụng thêm thư viện hoặc Windows API. Ngoài ra, XOR là một thuật toán mã hóa hai chiều, cho phép sử dụng cùng một hàm cho cả quá trình mã hóa và giải mã.
 ### XOR Encryption
 Đoạn code dưới đây minh họa một hàm mã hóa XOR cơ bản. Hàm này đơn giản thực hiện phép XOR trên từng byte của shellcode với một khóa có kích thước 1 byte.
-```C
+```c
 /*
 	- pShellcode : Base address of the payload to encrypt 
 	- sShellcodeSize : The size of the payload 

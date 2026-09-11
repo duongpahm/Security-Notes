@@ -16,7 +16,7 @@ PEB được hệ điều hành sử dụng để lưu trữ thông tin về cá
 PEB cũng lưu trữ các thông tin về process như Process ID và đường dẫn đến executable. Mỗi process được tạo ra đều có PEB riêng, chứa tập hợp thông tin riêng của process đó.
 ### PEB Structure
 Cấu trúc PEB trong C được thể hiện như dưới đây. Các thành phần được đánh dấu là **Reserved** có thể được bỏ qua.
-```C
+```c
 typedef struct _PEB {
   BYTE                          Reserved1[2];
   BYTE                          BeingDebugged;

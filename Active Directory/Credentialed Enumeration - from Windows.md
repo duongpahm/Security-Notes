@@ -95,7 +95,7 @@ Chúng ta có thể sử dụng function [Test-AdminAccess](https://powersploit.
 ## SharpView
 PowerView là một phần của bộ công cụ PowerShell offensive PowerSploit hiện tại không còn được phát triển. Công cụ này đang được BC-Security cập nhật như một phần của framework [Empire 4](https://github.com/BC-SECURITY/Empire/blob/master/empire/server/data/module_source/situational_awareness/network/powerview.ps1). 
 Một công cụ khác đáng để thử nghiệm là SharpView, một phiên bản .NET của PowerView. Nhiều function tương tự được PowerView hỗ trợ cũng có thể được sử dụng với SharpView. Chúng ta có thể nhập tên method cùng với `-Help` để lấy danh sách các argument.
-```PowerShell
+```powershell
 PS C:\htb> .\SharpView.exe Get-DomainUser -Identity forend
 
 [Get-DomainSearcher] search base: LDAP://ACADEMY-EA-DC01.INLANEFREIGHT.LOCAL/DC=INLANEFREIGHT,DC=LOCAL
