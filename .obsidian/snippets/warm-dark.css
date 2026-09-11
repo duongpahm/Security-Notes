@@ -1,0 +1,69 @@
+/* ==========================================================================
+   Obsidian Warm Dark Theme (Giao diện Dark tone Ấm cúng, dịu mắt)
+   Chuyển đổi toàn bộ nền Obsidian sang gam màu Dark ấm (Warm Charcoal / Espresso)
+   ========================================================================== */
+
+.theme-dark {
+  /* --- 1. MÀU NỀN CÁC KHU VỰC CHÍNH --- */
+  /* Nền trang soạn thảo chính (Editor Workspace) */
+  --background-primary: #1f1d1b !important;
+  --background-primary-alt: #262421 !important;
+
+  /* Nền thanh bên (Sidebar, File Explorer, Search, Bookmarks) */
+  --background-secondary: #181715 !important;
+  --background-secondary-alt: #131211 !important;
+
+  /* Nền thanh công cụ dọc (Ribbon) và thanh trạng thái (Status Bar) */
+  --ribbon-background: #141311 !important;
+  --status-bar-background: #181715 !important;
+
+  /* Nền tab đang mở và hàng tab */
+  --tab-background-active: #1f1d1b !important;
+  --tab-container-background: #181715 !important;
+  --titlebar-background: #181715 !important;
+  --titlebar-background-focused: #181715 !important;
+
+  /* --- 2. ĐƯỜNG VIỀN & HIỆU ỨNG TƯƠNG TÁC (Ấm nhẹ, không gắt) --- */
+  --background-modifier-border: #33302b !important;
+  --background-modifier-border-hover: #48443e !important;
+  --background-modifier-border-focus: #5d5750 !important;
+
+  /* Hiệu ứng khi rê chuột (Hover) và khi chọn (Active) */
+  --background-modifier-hover: rgba(255, 235, 205, 0.05) !important;
+  --background-modifier-active: rgba(255, 235, 205, 0.09) !important;
+  --nav-item-background-hover: rgba(255, 235, 205, 0.05) !important;
+  --nav-item-background-active: rgba(255, 235, 205, 0.09) !important;
+
+  /* Trường nhập liệu (Search bar, input fields, modals) */
+  --background-modifier-form-field: #262421 !important;
+  --background-modifier-form-field-highlighted: #302c29 !important;
+
+  /* --- 3. ĐỒNG BỘ VỚI THEME ANUPPUCCIN --- */
+  --ctp-base: 31, 29, 27 !important;
+  --ctp-mantle: 24, 23, 21 !important;
+  --ctp-crust: 19, 18, 17 !important;
+  --ctp-surface0: 44, 41, 38 !important;
+  --ctp-surface1: 58, 54, 50 !important;
+  --ctp-surface2: 73, 68, 63 !important;
+
+  /* --- 4. MÀU CHỮ TONE ẤM DỊU MẮT (HIGH CONTRAST WARM WHITE) --- */
+  --text-normal: #f4ede4 !important;
+  --text-muted: #c8c0b5 !important;
+  --text-faint: #989086 !important;
+  --inline-title-color: #f7f3ec !important;
+  --h1-color: #f7f3ec !important;
+  --h2-color: #f7f3ec !important;
+  --h3-color: #f7f3ec !important;
+  --h4-color: #f7f3ec !important;
+  --h5-color: #f7f3ec !important;
+  --h6-color: #f7f3ec !important;
+}
+
+/* Tối ưu nền cho các cửa sổ pop-up, command palette, menu chuột phải */
+.theme-dark .menu,
+.theme-dark .modal,
+.theme-dark .prompt {
+  background-color: #242220 !important;
+  border: 1px solid #3a3631 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}

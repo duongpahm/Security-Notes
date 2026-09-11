@@ -25,11 +25,8 @@
   }
 }
 
-/* Better code blocks */
-.markdown-rendered pre,
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
-  border-radius: 10px;
-}
+/* Code blocks styling is handled cleanly in code-blocks.css */
+
 
 /* Custom callout: attack */
 .callout[data-callout="attack"] {

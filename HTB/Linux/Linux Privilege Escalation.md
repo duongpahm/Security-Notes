@@ -202,10 +202,5 @@ w3bis2bi@htb[/htb]$ find / -path /proc -prune -o -type f -perm -o+w 2>/dev/null
 
 <SNIP>
 ```
-## Environment Enumeration
-Environment Enumeration là bước quan trọng nhất trong quá trình Privilege Escalation. Mặc dù có các công cụ như LinPEAS và LinEnum hỗ trợ tự động thu thập thông tin, người kiểm thử vẫn cần hiểu rõ cần tìm kiếm thông tin gì và có khả năng tự thực hiện Enumeration bằng tay.
-## Thông tin cần thu thập ban đầu
-- **OS Version**: Xác định bản phân phối Linux như Ubuntu, Debian, CentOS, Red Hat, Fedora,... Kiểm tra phiên bản hệ điều hành có còn được hỗ trợ hay đã hết vòng đời (EOL). Tra cứu xem có lỗ hổng hoặc Public Exploit dành cho phiên bản đó hay không.
-- **Kernel Version**: Xác định phiên bản Kernel, tìm kiếm các kernerl exploit hoặc local privilege escalation phù hợp. Lưu ý Kernel exploit có thể làm hệ thống mất ổn định hoặc bị treo.
-- **Running Services**: Liệt kê các dịch vụ đang chạy, đặc biệt là chạy dưới quyền root, kiểm tra các dịch vụ lỗi thời hoặc có CVE như Nagios, Samba, Exim...
+
 

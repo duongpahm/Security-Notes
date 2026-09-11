@@ -2,7 +2,7 @@
 Khi tham chiếu đến tài liệu Windows về một cấu trúc, có thể bắt gặp nhiều thành phần được đánh dấu là `reserved` bên trong cấu trúc đó. Các thành phân `reserved` này thường được biểu diễn dưới dạng mảng có kiểu dữ liệu `BYTE` hoặc `PVOID`. Cách triển khai này được Microsoft sử dụng nhằm duy trì tính bảo mật và hạn chế người dùng tìm hiểu cấu trúc nội bộ, từ đó tránh việc người dùng thực hiện các thay đổi đối với những thành phần `reserved` này.
 ### PEB Structure Example
 Process Environment Block (PEB) là một cấu trúc dữ liệu chứa thông tin về Windows process.Tuy nhiên, tài liệu của Microsoft về cấu trúc PEB hiển thị một số thành viên dưới dạng `reserved`, khiến việc truy cập các thành viên này trở nên khó khăn.
-```C
+```c
 typedef struct _PEB {
   BYTE                          Reserved1[2];
   BYTE                          BeingDebugged;
