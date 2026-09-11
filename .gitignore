@@ -1,15 +1,44 @@
+# macOS
 .DS_Store
-.trash/
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
-.obsidian/cache/
-.obsidian/hotkeys.json
-.obsidian/appearance.json
-.obsidian/graph.json
-.obsidian/snippets/claude-code-blocks.css
-photorec.se*
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
 
-# Visual Studio & C/C++ build artifacts
+# Obsidian folder (settings, plugins, hotkeys, themes, cache)
+.obsidian/
+
+# Claude config
+.claude/
+
+# Source code folders & files
+Code/
+*.c
+*.cpp
+*.cc
+*.cxx
+*.h
+*.hpp
+*.cs
+*.py
+*.sh
+*.bash
+*.zsh
+*.ps1
+*.psm1
+*.vbs
+*.bat
+*.cmd
+*.asm
+*.go
+*.rs
+*.java
+
+# Visual Studio & build artifacts / project files
+*.sln
+*.vcxproj
+*.vcxproj.*
 .vs/
 *.ipch
 *.suo
@@ -28,3 +57,10 @@ x86/
 *.tlog
 *.idb
 *.exe
+*.dll
+*.so
+*.dylib
+
+# Obsidian trash & recovery
+.trash/
+photorec.se*
