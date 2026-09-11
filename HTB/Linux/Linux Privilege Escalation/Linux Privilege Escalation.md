@@ -1,3 +1,38 @@
+# Linux Privilege Escalation
+
+## Modules
+- **Environment-based Privilege Escalation**
+  - [[Path Abuse]]
+  - [[Wildcard Abuse]]
+  - [[Escaping Restricted Shells]]
+- **Permissions-based Privilege Escalation**
+  - [[Special Permissions]]
+  - [[Sudo Rights Abuse]]
+  - [[Privileged Groups]]
+  - [[Capabilities]]
+- **Service-based Privilege Escalation**
+  - [[Vulnerable Services]]
+  - [[Cron Job Abuse]]
+  - [[Containers]]
+  - [[Docker]]
+  - [[Miscellaneous Techniques]]
+- **Linux Internals-based Privilege Escalation**
+  - [[Kernel Exploits]]
+  - [[Shared Libraries]]
+  - [[Shared Object Hijacking]]
+  - [[Python Library Hijacking]]
+- **Recent 0-Days**
+  - [[Sudo]]
+  - [[Polkit]]
+  - [[Dirty Pipe]]
+  - [[Netfilter]]
+- **Hardening Considerations**
+  - [[Hardening Considerations]]
+- **Skills Assessment**
+  - [[Skills Assessment]]
+
+---
+
 ## Introduction to Linux Privilege Escalation
 Tài khoản root trên các hệ thống Linux cung cấp toàn quyền quản trị đối với hệ điều hành. Trong quá trình thực hiện một bài đánh giá bảo mật, bạn có thể chỉ giành được một phiên shell với quyền hạn thấp trên máy Linux và cần thực hiện leo thang đặc quyền để đạt được quyền root.
 Việc chiếm quyền hoàn toàn đối với máy chu cho phép chúng ta thu thập lưu lượng mạng và truy cập các tệp nhạy cảm. Những dữ liệu này có thể được sử dụng để mở rộng phạm vi truy cập trong môi trường mục tiêu. Ngoài ra, nếu máy Linux đã được tham gia miền, chúng ta có thể thu thập NTLM Hash và bắt đầu quá trình thu thập thông tin cũng như tấn công vào AD.

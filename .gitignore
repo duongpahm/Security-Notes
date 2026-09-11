@@ -3,6 +3,10 @@
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 .obsidian/cache/
+.obsidian/hotkeys.json
+.obsidian/appearance.json
+.obsidian/graph.json
+.obsidian/snippets/claude-code-blocks.css
 photorec.se*
 
 # Visual Studio & C/C++ build artifacts
